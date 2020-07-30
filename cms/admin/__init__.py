@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, abort
 from cms.admin.models import Type, Content, Setting, User
 
-admin_bp = Blueprint(name='admin', import_name='admin', url_prefix='/admin')
+admin_bp = Blueprint('admin', __name__, url_prefix='/admin')
 
 ## Admin Routes
 def requested_type(type):
